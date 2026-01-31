@@ -1,0 +1,11 @@
+@startuml
+class Database {
+    - _instance : Database
+    - connection : String
+    + connect() : String
+}
+
+Database : __new__()
+
+Database --> Database : uses single instance
+@enduml
