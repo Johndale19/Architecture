@@ -1,0 +1,14 @@
+@startuml
+class Student {
+    + name : String
+    + course : String
+}
+
+class StudentRepository {
+    - students : List<Student>
+    + add_student(name, course)
+    + get_all_students() : List<Student>
+}
+
+StudentRepository "1" o-- "*" Student
+@enduml
