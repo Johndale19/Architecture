@@ -1,0 +1,16 @@
+@startuml
+interface DisplayStrategy {
+    + display(students)
+}
+
+class SimpleDisplay {
+    + display(students)
+}
+
+class DetailedDisplay {
+    + display(students)
+}
+
+DisplayStrategy <|-- SimpleDisplay
+DisplayStrategy <|-- DetailedDisplay
+@enduml
